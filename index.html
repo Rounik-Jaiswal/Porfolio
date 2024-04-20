@@ -1,0 +1,411 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" media="only screen and (max-width: 600px)" href="portfolio2.css" />
+    <link rel="stylesheet" media="only screen and (min-width: 601px)" href="portfolio.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&family=Nova+Flat&family=Over+the+Rainbow&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+      const colors = ['#B4EBFF', '#DCBCFF', '#FFF2BC', '#FFBCC2','#9DE891']; 
+      window.addEventListener('scroll', function() {
+      const scrolled = window.scrollY / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 1.2;
+      const colorIndex = Math.floor(scrolled * (colors.length - 1));
+      document.body.style.backgroundColor = colors[colorIndex];
+
+      /* For scroll part*/
+      window.onload = function() {
+        const targetElement = document.getElementById("placeholder");
+        if (targetElement) {
+            setTimeout(function() {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }, 5); 
+        } else {
+            console.error("Target element with ID 'targetDiv' not found!");
+        }
+        
+    };
+
+
+      /* For academic scroll */
+      function scrollToTarget0(){
+        const target0=document.getElementById("placeholder");
+        target0.scrollIntoView({behavior:"smooth"});
+      }
+      const button0 = document.getElementById("Button-0");
+      button0.addEventListener("click", scrollToTarget0);
+
+      function scrollToTarget1(){
+        const target1=document.getElementById("academic");
+        target1.scrollIntoView({behavior:"smooth"});
+      }
+      const button1 = document.getElementById("Button-1");
+      button1.addEventListener("click", scrollToTarget1);
+    
+      function scrollToTarget2(){
+        const target2=document.getElementById("page3");
+        target2.scrollIntoView({behavior:"smooth"});
+      }
+      const button2 = document.getElementById("Button-2");
+      button2.addEventListener("click", scrollToTarget2);
+      
+      function scrollToTarget3(){
+        const target3=document.getElementById("page4");
+        target3.scrollIntoView({behavior:"smooth"});
+      }
+      const button3 = document.getElementById("Button-3");
+      button3.addEventListener("click", scrollToTarget3);
+      
+      function scrollToTarget4(){
+        const target4=document.getElementById("page5");
+        target4.scrollIntoView({behavior:"smooth"});
+      }
+      const button4 = document.getElementById("Button-4");
+      button4.addEventListener("click", scrollToTarget4);
+
+      });
+      
+      function scrolll(){
+        var left= document.querySelector(".scroll-images");
+        left.scrollBy(350,0)
+      }
+      function scrollr(){
+        var right= document.querySelector(".scroll-images");
+        right.scrollBy(-350,0)
+      }
+
+      function linkedin(){
+        window.open("https://www.linkedin.com/in/rounik-jaiswal-226271274")
+      }
+
+      function instagram(){
+        window.open("https://www.instagram.com/_rounik_jaiswal_25?igsh=MW1ya2NoM3Y3cXE2eg%3D%3D&utm_source=qr")
+      }
+
+      function showTemporaryNotification(message) {
+        const notification = document.createElement("div");
+        notification.textContent = message;
+        notification.style.cssText = `
+          position: fixed;
+          top: 85%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: white;
+          padding: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          z-index: 999;
+        `;
+        document.body.appendChild(notification);
+        setTimeout(() => {
+          document.body.removeChild(notification);
+        }, 1000);
+      }
+
+      function copyText(textToCopy) {
+        if (!navigator.clipboard) {
+          return; // Clipboard API not supported
+        }
+        navigator.clipboard.writeText(textToCopy)
+          .then(() => {
+            console.log("Text copied to clipboard successfully!");
+          })
+          .catch(err => {
+            console.error("Failed to copy text to clipboard:", err);
+          });
+      }
+
+      function phone(){
+        copyText("8103002037");
+        showTemporaryNotification("Phone number copied to clipboard");
+      }
+
+      function email(){
+        copyText("rounik.jaiswal2022@gmail.com");
+        showTemporaryNotification("Email Adress copied to clipboard");
+      }
+      
+      function github(){
+        window.open("https://github.com/Get4nik")
+      }
+
+    </script>
+  </head>
+
+
+  <body>
+    <div id="placeholder"></div>
+    <nav>
+      <button id="Button-0" value="Home" > Home</button>
+      <button id="Button-1" value="Academics" > Academics</button>
+      <button id="Button-2" value="Skills"> Skills</button>
+      <button id="Button-3" value="Projects"> Projects</button>
+      <button id="Button-4" value="Button-4">Contact</button>
+      
+    </nav>
+
+
+    <article>
+
+      <div id="page1" >
+        <div id="left">
+          <p style="font-size: 25pt;text-align: center;"><br>Hi Everyone,<br></p>
+          <p style="font-size: 25pt;text-align: center;">
+            &nbsp &nbsp I am <b style="font-size: 36pt;">Rounik Jaiswal</b><br>
+          </p>
+          <p style="font-size: 20pt;line-height: 30pt;">
+            BTech Undergraduate at Vellore Institute of Technology.<br>
+            Web Developer and UI/UX Designer.<br>
+            Currently working as a Frontend developer in a group mini poject<br>
+            My TechStack : <br>
+            &emsp14;&emsp13; Python <br>
+            &emsp14;&emsp13; C/C++ <br>
+            &emsp14;&emsp13; Java <br>
+            &emsp14;&emsp13; JavaScript and React JS <br>
+            &emsp14;&emsp13; Figma <br>
+            &emsp14;&emsp13; Chakra UI
+            
+
+          </p>
+        </div>
+      
+        
+
+        <div id="right">
+          <img src="img/finalIMg.png">
+        
+        </div>
+
+        
+      </div>
+      
+      <div id="page2">
+        
+        <div id="academic">
+        <h1 style="text-align: center;">Academics</h1>
+        
+        <b>BTech:</b><br>
+        <ul style="line-height: 24pt;">
+          
+          University: Vellore Institute of Technology <br>
+          School: SCOPE <br>
+          Branch: Computer Science Engineering - Core Branch <br>
+          CGPA: 8.90 / 10 <br>
+        </ul> 
+      <b>12th Grade:</b><br>
+        <ul style="line-height: 24pt;">
+          School: R.D Public School<br>
+          Board: CBSE <br>
+          Percentage: 92% <br>
+          
+        </ul>
+        
+      <b>10th Grade: </b><br>
+        <ul style="line-height: 24pt;">
+          School: Paradise Hr. Sec. School<br>
+          Board: State Board (M.P) <br>
+          Percentage: 98.3% (First Rank in District) <br> <br>
+        </ul>
+        
+        
+        </div>
+      
+        <div id="vit">
+          <img src="img/vit.png" alt="">
+          <h1>Vit Vellore</h1>
+        </div>
+        
+      </div>
+       
+      <div id="page3" style="text-align: center;;">
+        
+        <h1 style="font-size: 30pt; margin-left: 10% ;padding-right: 6rem;">Skills</h1>
+        <div id="skillset1" >
+          <div class="box flipJS">
+            <div class="frontJS imgBox">
+              <img src="img/javascript.jpg">
+            </div>
+            <div class="backJS">
+              <p style="font-size: 16pt; padding: 5px 5px;">
+                <b style="font-size: 20pt;">JavaScript <br><br></b>
+                &nbsp; HTML. <br>
+                &nbsp; CSS. <br>
+                &nbsp; NodeJS.
+              </p>
+            </div>
+          </div>
+          <div class="box flipJS">
+            <div class="frontJS imgBox">
+              <img src="img/c-cpp.jpg">
+            </div>
+            <div class="backJS">
+              <p style="font-size: 16pt; padding: 5px 5px;">
+                <b style="font-size: 20pt;">C/C++ <br><br></b>
+                Object  Oriented Programming.<br>
+                Data Architecture and Algorithms.
+              </p>
+            </div>
+          </div>
+          <div class="box flipJS">
+            <div class="frontJS imgBox">
+              <img src="img/python.jpg">
+            </div>
+            <div class="backJS">
+              <p style="font-size: 16pt; padding: 5px 5px;">
+                <b style="font-size: 20pt;">Python <br><br></b>
+                Numpy <br>
+                RegEx <br>
+                Pandas <br>
+                Turtle Graphics
+              </p>
+            </div>
+          </div>
+          <div class="box flipJS">
+            <div class="frontJS imgBox">
+              <img src="img/DBMS.png">
+            </div>
+            <div class="backJS">
+              <p style="font-size: 16pt; padding: 5px 5px;">
+                <b style="font-size: 20pt;">DBMS <br><br></b>
+                &nbsp; MySQL <br>
+                &nbsp; BigQuery
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div id="skillset2">
+          <div class="box flipJS">
+            <div class="frontJS imgBox">
+              <img src="img/React.png">
+            </div>
+            <div class="backJS">
+              <p style="font-size: 16pt; padding: 5px 5px;">
+                <b style="font-size: 20pt;">React JS <br><br></b>
+                &nbsp; App Development <br>
+                &nbsp; Web Development
+              </p>
+            </div>
+          </div>
+          <div class="box flipJS">
+            <div class="frontJS imgBox">
+              <img src="img/DSA.png">
+            </div>
+            <div class="backJS">
+              <p style="font-size: 14pt; padding: 5px 5px;">
+                <b style="font-size: 20pt;">DSA <br><br></b>
+                Sorting Algorithms. <br> <br>
+                Linked List. <br><br>
+                Trees and Graphs <br><br>
+              </p>
+            </div>
+          </div>
+          <div class="box flipJS">
+            <div class="frontJS imgBox">
+              <img src="img/UI-UX.png">
+            </div>
+            <div class="backJS">
+              <p style="font-size: 16pt; padding: 5px 5px;">
+                <b style="font-size: 20pt;">UI/UX <br><br></b>
+                &nbsp; Chakra UI <br>
+                &nbsp; Figma
+              </p>
+            </div>
+          </div>
+          
+        </div>
+        <br><br>
+          
+      </div>
+
+      <div id="page4">
+        <div style="height: 4rem;"><br></div>
+        <div >
+          <h1 style="text-align: center;font-size: 36pt;margin-top: 2rem;">Projects <br><br></h1>
+          
+        </div>
+        <div class="main-scroll-div" >
+          <div>
+            <button class="icon" onclick="scrollr()">Prev</button>
+          </div>
+          <div class="cover">
+            <div class="scroll-images">
+              <div class="child"><img class="child-img" src="img/project1.jpg" ></div>
+              <div class="child"><img class="child-img" src="img/project3.png" ></div>
+              <div class="child"><img class="child-img" src="img/project2.jpg" ></div>
+              <div class="child"><img class="child-img" src="img/project4.png" ></div>
+              <div class="child"><img class="child-img" src="img/project5.png" ></div>
+            </div>
+          </div>
+          <div>
+            <button class="icon" onclick="scrolll()"> Next </i></button>
+          </div>
+        </div>
+        <div style="height: 10rem;">
+
+        </div>
+      </div>
+
+      <div id="page5">
+        <div style="height: 4rem;"></div>
+        <h1 style="text-align: center; font-size: 36pt;">Contact</h1>
+        <div id="contact-cover">
+          <div id="contact-me">
+            <form>
+              <b>My Details -</b><br> 
+              Rounik Jaiswal <br>
+              Mob no. 8103002037 <br>
+              Email- rounik.jaiswal2022@vitstudent.ac.in <br>
+              4th Semester BTech Student <br>
+              VIT ,Vellore 632014
+            
+            </form>
+          </div>
+          <div id="share-contact">
+            <form>
+              <b>Share Your Contact </b> <br>
+              Name :
+              <input type="text" placeholder="Enter your name"> <br>
+              Email :
+              <input type="text" placeholder="Enter valid Email"> <br>
+              Subject :
+              <input type="text" placeholder="Enter the Subject"> <br>
+              Other Details :
+              <textarea rows="5" cols="50" placeholder="Type your text here"></textarea><br>
+              <button id="submit-button">Submit</button>
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+  </article>
+  
+  <footer>
+    <div class="icon-container">
+      <i class="fa-brands fa-linkedin-in" style="color: #000000;" onclick="linkedin()"></i>
+    </div>
+    <div class="icon-container">
+      <i class="fa-brands fa-instagram" style="color: #000000;" onclick="instagram()"></i>
+    </div>
+    <div class="icon-container">
+      <i class="fa-solid fa-phone" style="color: #000000;" onclick="phone()"></i>
+    </div>
+    <div class="icon-container">
+      <i class="fa-solid fa-envelope" style="color: #000000;" onclick="email()"></i>
+    </div>
+    <div class="icon-container">
+      <i class="fa-brands fa-github" style="color: #000000;" onclick="github()"></i>
+    </div>
+  </footer>
+    
+    
+  </body>
+</html>
